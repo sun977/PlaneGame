@@ -1,0 +1,10 @@
+D:\Visual Studio\projects\飞机大战-2020\obj\Debug\飞机大战_2020.Form1.resources
+D:\Visual Studio\projects\飞机大战-2020\obj\Debug\飞机大战_2020.Properties.Resources.resources
+D:\Visual Studio\projects\飞机大战-2020\obj\Debug\飞机大战-2020.csproj.GenerateResource.cache
+D:\Visual Studio\projects\飞机大战-2020\obj\Debug\飞机大战-2020.csproj.CoreCompileInputs.cache
+D:\Visual Studio\projects\飞机大战-2020\bin\Debug\飞机大战-2020.exe.config
+D:\Visual Studio\projects\飞机大战-2020\bin\Debug\飞机大战-2020.exe
+D:\Visual Studio\projects\飞机大战-2020\bin\Debug\飞机大战-2020.pdb
+D:\Visual Studio\projects\飞机大战-2020\obj\Debug\飞机大战-2020.exe
+D:\Visual Studio\projects\飞机大战-2020\obj\Debug\飞机大战-2020.pdb
+D:\Visual Studio\projects\飞机大战-2020\obj\Debug\飞机大战-2020.csprojAssemblyReference.cache

@@ -1,0 +1,139 @@
+1、父类：GameObject
+   属性：
+     X ：横坐标
+     Y ：纵坐标
+     Width ：宽度
+     Heigth ：高度
+     Speed ：速度
+     Life ：生命值
+     Dirction ：方向
+   方法：
+     Move() ：移动虚方法
+     Draw() ：绘制到窗体的抽象方法
+     GetRectangle() ：用于碰撞检测的方法
+
+2、背景类：BackGround ： GameObject
+    属性：
+     imgBG：背景图片
+    方法：
+     BackGround()：调用GameOblect类的构造函数
+     Draw()：绘制自己到窗体
+
+3、单例类：SingleObject ：GameObject
+     1）单例设计模式
+     2）声明了一个background属性，SingleObject只有为一个对象，它的属性也是唯一的
+     3）AddGameObject() 添加游戏对象到窗体中
+     4）Draw() 调用游戏对象的自己的 Draw()函数，来绘制自己到窗体
+     5）RemoveGameObject() 销毁游戏对象
+    属性：
+     single
+     Score ： 用于记分的变量
+     BackGround ：背景对象
+     PH ：玩家飞机对象
+     listHearoZiDan ：玩家飞机子弹集合对象
+     listEnemyZiDan ：敌人飞机子弹集合对象
+     listPlaneEnemy ：敌人飞机集合对象
+     listEnemyBoom ：敌人飞机爆炸对象
+     listHeroBoom ：玩家飞机爆炸对象
+    方法：
+      AddGameObject() ：添加游戏对象到窗体
+      RemoveGameObject() ：从窗体移除游戏对象
+      Draw() ：调用对象本身的Draw()函数绘制对象本身
+      Collision() ：碰撞检测方法
+
+4、飞机父类：PlaneFather ： GameObject
+     1）存图片的变量
+     2）构造函数---调用GameObject构造函数
+     3）没有实现GameObject了的Draw方法，所以改成抽象类
+    属性：
+     imgPlane ：存放飞机图片变量
+    方法：
+     PlaneFather() ：构造函数，调用GameObject的构造函数
+     Fire() ：开火，抽象方法
+     IsOver() ：死亡，抽象方法
+
+5、玩家飞机类：PlaneHero ： PlaneFather
+     1）存取玩家飞机的变量
+     2）构造函数---调用PlaneFather的构造函数
+     3）重写父类中Draw函数，将自己绘制到窗体
+     4）跟随鼠标移动函数
+     5）开炮函数
+    属性：
+     imgHero ：存放玩家飞机图片
+    方法：
+     PlaneHero() ：构造函数调用飞机父类构造函数
+     Draw() : 绘制自己到窗体方法
+     MouseMove() ：跟随鼠标移动方法
+     Fire() ：开火方法 重写
+     IsOver() ：死亡方法 重写
+
+6、敌人飞机类：PlaneEnemy ：PlaneFather
+    属性：
+     img1 ：小飞机
+     img2 ：中飞机
+     img3 ：大飞机
+     EnemyType ：飞机类型
+    方法：
+     PlaneEnemy() ：构造函数
+     GetImage() ：根据类型返回飞机图片方法
+     GetLife() ：根据类型返回飞机生命值方法
+     GetSpeed() ：根据类型返回飞机速度方法
+     Draw() ：绘制自己到窗体的方法
+     Move() ：移动方法 重写
+     Fire() ：开火方法 重写
+     IsOver() ：死亡方法 重写
+
+
+7、子弹父类：ZiDan ：GameObject
+     1）子弹图片的变量
+     2）子弹的构造函数
+     3）子弹威力变量
+     4）重写Draw函数
+     5）重写Move函数   
+    属性：
+     imgZiDan ：子弹图片变量
+     Power ：子弹威力变量
+    方法：
+     ZiDan() ：构造函数
+     Draw() ：绘制自己到窗体的方法
+     Move() ：移动方法 重写
+
+8、玩家子弹类：HeroZiDan ：ZiDan
+    1）存图片的变量
+    2）构造函数---调用ZiDan类的构造函数
+
+    属性：
+     imgHero ：玩家子弹图片变量
+    方法：
+     HeroZiDan ：构造函数
+
+
+9、敌人子弹类：EnemyZiDan ：ZiDan
+    属性：
+     imgHero ：敌人子弹图片变量
+    方法：
+     HeroZiDan ：构造函数
+
+10、爆炸的父类：Boom ：GameObject
+     属性：
+     方法：
+      Boom() ：构造函数
+
+11、玩家爆炸：HeroBoom : Boom
+     属性：
+      imgs[] ：存放玩家飞机爆炸图片的数组
+     方法：
+      HeroBoom() ：构造函数
+      Draw() ：绘制自己到窗体的方法 重写
+
+
+12、敌人爆炸：EnemyBoom : Boom
+     属性：
+      imgs1[] ：小飞机爆炸图片数组
+      imgs2[] ：中飞机爆炸图片数字
+      imgs3[] ：大飞机爆炸图片数组
+      Type ：飞机类型
+     方法：
+      EnemyBoom() ：构造函数
+      Draw() ：绘制自己到窗体的方法
+
